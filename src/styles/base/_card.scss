@@ -28,7 +28,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: $m-size $l-size;
+    padding: $l-size $m-size;
 
     &__content {
         text-align: center;
@@ -42,5 +42,32 @@
             width: 100%;
             color: $color-medium-blue;
         }
+    }
+}
+
+.avatar-card {
+    display: flex;
+    background-color: $color-light-black;
+    color: $color-light-grey;
+    padding: $m-size $l-size;
+    border-radius: 10px;
+    align-items: center;
+    width: 80%;
+
+    &__content {
+        text-align: center;
+    }
+
+    &__img-box {
+        height: 10rem;
+        width: 10rem;
+        overflow: hidden;
+        border-radius: 50rem;
+        border: 3px solid $color-light-grey;
+        margin-right: $s-size;
+    }
+
+    &__img {
+        width: 100%;
     }
 }

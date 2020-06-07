@@ -32,10 +32,45 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 
     &__cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minMax(15rem, 1fr));
         grid-column-gap: $s-size;
+    }
+}
+
+.about-team {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        & div:not(:last-child) {
+            margin-bottom: $s-size;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minMax(45rem, 1fr));
+        grid-column-gap: $s-size;
+    }
+
+    &__img-box {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
     }
 }
