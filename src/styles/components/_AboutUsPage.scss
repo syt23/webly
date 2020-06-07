@@ -1,0 +1,41 @@
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(45rem, 1fr));
+    grid-column-gap: $s-size;
+
+    &__left {
+        padding: $xl-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: normal;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__wrapper {
+        border: 1px solid black;
+        padding: $l-size $xl-size;
+    }
+}
+
+.about-intro {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minMax(15rem, 1fr));
+        grid-column-gap: $s-size;
+    }
+}

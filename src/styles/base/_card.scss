@@ -1,0 +1,46 @@
+.icon-card {
+    color: $color-light-black;
+    display: grid;
+    grid-template-columns: minMax(min-content, 30rem) minMax(2rem, 8rem);
+    grid-column-gap: $s-size;
+    align-items: center;
+
+    &__content {
+        text-align: center;
+    }
+
+    &__icon-box {
+        max-height: 8rem;
+        
+        & svg {
+            height: 100%;
+            width: 100%;
+            color: $color-medium-blue;
+        }
+    }
+}
+
+.tall-card {
+    color: $color-light-black;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $m-size $l-size;
+
+    &__content {
+        text-align: center;
+    }
+
+    &__icon-box {
+        height: 8rem;
+        
+        & svg {
+            height: 100%;
+            width: 100%;
+            color: $color-medium-blue;
+        }
+    }
+}

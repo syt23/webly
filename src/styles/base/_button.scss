@@ -1,0 +1,22 @@
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: $s-size $l-size;
+    text-transform: uppercase;
+    font-size: $font-size-large;
+    background-color: none;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Quicksand', Helvetica, Arial, sans-serif;
+    transition: all .2s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.btn-purple {
+    background: $gradient-purple;
+    color: white;
+    box-shadow: $box-shadow;
+}

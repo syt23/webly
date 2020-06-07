@@ -1,0 +1,63 @@
+.flex-grow {
+    flex-grow: 1;
+}
+
+.bg-black {
+    background-color: $color-light-black;
+    color: $color-light-grey;
+}
+
+.bg-grey {
+    background-color: $color-light-grey;
+    color: $color-light-black;
+}
+
+.bg-white {
+    background-color: white;
+    color: $color-light-black;
+}
+
+.bg-blue {
+    background-color: $color-medium-blue;
+    color: $color-light-grey;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.hr {
+    width: 80%;
+    display: inline-block;
+}
+
+.hr-right {
+    text-align: right;
+    margin-right: 0;
+}
+
+.text-pink-gradient {
+    background: -webkit-linear-gradient($color-bright-pink, $color-light-purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.align-right {
+    align-self: flex-end;
+}
+
+.align-left {
+    align-self: flex-start;
+}
+
+.margin-bottom-small {
+    margin-bottom: $s-size;
+}
+
+.margin-bottom-medium {
+    margin-bottom: $m-size;
+}
+
+.margin-bottom-large {
+    margin-bottom: $l-size;
+}

@@ -1,0 +1,116 @@
+.container {
+    padding: $xl-size;
+}
+
+.banner {
+    height: calc(100vh - 4.5rem);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 6rem;
+        letter-spacing: 1.5rem;
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        font-size: $font-size-large;
+        letter-spacing: 1.1rem;
+    }
+
+    &__img-box {
+        height: 25rem;
+    }
+
+    &__img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+.section-services {
+    background: url('../../assets/HomePage/wave.png');
+    background-size: 100% 45%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: $color-light-grey;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(45rem, 1fr));
+    grid-column-gap: $s-size;
+
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.section-web {
+    height: 100vh;
+}
+
+.web {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(45rem, 1fr));
+    grid-column-gap: $s-size;
+    height: 100%;
+
+    &__title-box {
+        border-left: 5px solid $color-medium-pink;
+        padding-left: $xl-size;
+
+        &--right {
+            border-left: none;
+            border-right: 5px solid $color-light-purple;
+            text-align: right;
+            padding-right: $xl-size;
+            padding-left: 0;
+        }
+
+        &--blue {
+            border-left: 5px solid $color-medium-blue;
+        }
+    }
+
+    &__content-box {
+        padding: 0 $xl-size;
+
+        &--right {
+            text-align: right;
+
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

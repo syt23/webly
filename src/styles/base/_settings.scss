@@ -1,0 +1,32 @@
+// Colours
+$color-medium-blue: #4A41FF;
+$color-medium-pink: #E7ADFF;
+$color-bright-pink: #F68AFF;
+$color-light-purple: #9994FE;
+$color-light-grey: #F0F1F2;
+$color-medium-grey: #C4C4C4;
+$color-light-black: #161616;
+
+$gradient-purple: linear-gradient(to bottom right, #4A41FF, #827CFF);
+
+$box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.3);
+
+// Breakpoints
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+$bp-smallest: 28.1em;    // 450px;
+
+// Font Size
+$font-size-large: 1.8rem;
+$font-size-small: 1.4rem;
+$font-size-default: 1.6rem;
+$font-size-header-secondary: 3.3rem;
+$font-size-header-tertiary: 2.5rem;
+
+// Spacing
+$s-size: 1.2rem;
+$m-size: 2rem;
+$l-size: 4rem;
+$xl-size: 6rem;
