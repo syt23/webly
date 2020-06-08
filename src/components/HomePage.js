@@ -5,9 +5,27 @@ import Footer from './Footer'
 import IconCard from './IconCard'
 import logo from '../assets/HomePage/logo.png'
 import video from '../assets/HomePage/webly.mp4'
+import dscnus2 from '../assets/HomePage/dscnus2.png'
+import babybiome1 from '../assets/HomePage/babybiome1.png'
+import babybiome2 from '../assets/HomePage/babybiome2.png'
+import aurigamart1 from '../assets/HomePage/aurigamart1.png'
+import photo1 from '../assets/HomePage/photo1.jpg'
+import photo2 from '../assets/HomePage/photo2.jpg'
+import photo3 from '../assets/HomePage/photo3.jpg'
+import photo4 from '../assets/HomePage/photo4.jpg'
+import photo5 from '../assets/HomePage/photo5.jpg'
+import design1 from '../assets/HomePage/design1.png'
+import design2 from '../assets/HomePage/design2.jpg'
+import design3 from '../assets/HomePage/design3.jpg'
+import design4 from '../assets/HomePage/design4.jpg'
+import design5 from '../assets/HomePage/design5.png'
 
 class HomePage extends Component {
     state = {}
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
 
     render() {
         return (
@@ -75,14 +93,43 @@ class HomePage extends Component {
                             </div>
                         </div>
                         <div className="web__right">
-                            Pictures
+                            <div className="gallery-4x3">
+                                <figure className="gallery-4x3__item gallery-4x3__item--1">
+                                    <img src={aurigamart1} alt="aurigamart" className="gallery-4x3__img" />
+                                </figure>
+                                <figure className="gallery-4x3__item gallery-4x3__item--2">
+                                    <img src={babybiome1} alt="babybiome" className="gallery-4x3__img" />
+                                </figure>
+                                <figure className="gallery-4x3__item gallery-4x3__item--3">
+                                    <img src={babybiome2} alt="babybiome" className="gallery-4x3__img" />
+                                </figure>
+                                <figure className="gallery-4x3__item gallery-4x3__item--4">
+                                    <img src={dscnus2} alt="dscnus" className="gallery-4x3__img" />
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section className='section-web bg-grey'>
                     <div className='web'>
                         <div className="web__right">
-                            Pictures
+                            <div className="gallery-3x3">
+                                <figure className="gallery-3x3__item gallery-3x3__item--1">
+                                    <img src={photo5} alt="photo" className="gallery-3x3__img" />
+                                </figure>
+                                <figure className="gallery-3x3__item gallery-3x3__item--2">
+                                    <img src={photo2} alt="photo" className="gallery-3x3__img" />
+                                </figure>
+                                <figure className="gallery-3x3__item gallery-3x3__item--3">
+                                    <img src={photo3} alt="photo" className="gallery-3x3__img" />
+                                </figure>
+                                <figure className="gallery-3x3__item gallery-3x3__item--4">
+                                    <img src={photo4} alt="photo" className="gallery-3x3__img" />
+                                </figure>
+                                <figure className="gallery-3x3__item gallery-3x3__item--5">
+                                    <img src={photo1} alt="photo" className="gallery-3x3__img" />
+                                </figure>
+                            </div>
                         </div>
                         <div className="web__left">
                             <div className="web__title-box web__title-box--right">
@@ -113,7 +160,26 @@ class HomePage extends Component {
                             </div>
                         </div>
                         <div className="web__right">
-                            Pictures
+                            <div className="gallery-3x2">
+                                <figure className="gallery-3x2__item gallery-3x2__item--1">
+                                    <img src={design1} alt="design" className="gallery-3x2__img" />
+                                </figure>
+                                <figure className="gallery-3x2__item gallery-3x2__item--2">
+                                    <img src={design2} alt="design" className="gallery-3x2__img" />
+                                </figure>
+                                <figure className="gallery-3x2__item gallery-3x2__item--3">
+                                    <img src={design5} alt="design" className="gallery-3x2__img" />
+                                </figure>
+                                <figure className="gallery-3x2__item gallery-3x2__item--4">
+                                    <img src={design4} alt="design" className="gallery-3x2__img" />
+                                </figure>
+                                <figure className="gallery-3x2__item gallery-3x2__item--5">
+                                    <img src={design3} alt="design" className="gallery-3x2__img" />
+                                </figure>
+                                <figure className="gallery-3x2__item gallery-3x2__item--6">
+                                    <img src={logo} alt="design" className="gallery-3x2__img" />
+                                </figure>
+                            </div>
                         </div>
                     </div>
                 </section>

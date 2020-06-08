@@ -1,0 +1,15 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    & *:not(:last-child) {
+        margin-bottom: $s-size;
+    }
+
+    &__input {
+        border: none;
+        background-color: $color-light-grey;
+        padding: $s-size $m-size;
+    }
+}

@@ -12,21 +12,27 @@ import team from '../assets/AboutUsPage/team.png'
 class AboutUsPage extends Component {
     state = {}
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
     render() {
         return (
             <div>
                 <Nav />
-                <div className='banner bg-white about'>
-                    <div className='about__left'>
-                        <div className='about__wrapper'>
-                            <h2 className='about__title'>We create <b>art</b></h2>
-                            <h2 className='about__title'>We deliver <b>results</b></h2>
-                            <h2 className='about__title'>We capture <b>moments</b></h2>
+                <div className="container">
+                    <div className='banner bg-white about'>
+                        <div className='about__left'>
+                            <div className='about__wrapper'>
+                                <h2 className='about__title'>We create <b>art</b></h2>
+                                <h2 className='about__title'>We deliver <b>results</b></h2>
+                                <h2 className='about__title'>We capture <b>moments</b></h2>
+                            </div>
                         </div>
-                    </div>
-                    <div className='about__right'>
-                        <div className="about__img-box">
-                            <img src={about} alt="About us" className="about__img" />
+                        <div className='about__right'>
+                            <div className="about__img-box">
+                                <img src={about} alt="About us" className="about__img" />
+                            </div>
                         </div>
                     </div>
                 </div>
