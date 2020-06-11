@@ -1,5 +1,10 @@
 .title {
     font-size: 1.8rem;
+    
+    & a {
+        color: white;
+        text-decoration: none;
+    }
 }
 
 .title-secondary {

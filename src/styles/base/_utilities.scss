@@ -26,6 +26,10 @@
     text-align: right;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 .hr {
     width: 80%;
     display: inline-block;
@@ -60,4 +64,28 @@
 
 .margin-bottom-large {
     margin-bottom: $l-size;
+}
+
+.align-self {
+    align-self: center;
+}
+
+.display-screen {
+    display: block;
+
+    @media screen and (max-width: $bp-medium) {
+        display: none;
+    }
+}
+
+.display-mobile {
+    display: none;
+    
+    @media screen and (max-width: $bp-medium) {
+        display: block;
+    }
+}
+
+.display-none {
+    display: none;
 }

@@ -1,9 +1,17 @@
 .container {
     padding: $xl-size;
+
+    @media screen and (max-width: $bp-medium) {
+        padding: $l-size;
+    }
+
+    @media screen and (max-width: $bp-small) {
+        padding: $m-size;
+    }
 }
 
 .banner {
-    height: calc(100vh - 12rem);
+    min-height: calc(100vh - 12rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,20 +51,30 @@
 }
 
 .section-services {
-    background: url('../../assets/HomePage/wave.png');
-    background-size: 100% 45%;
+    background: url('../../assets/HomePage/wave.svg');
+    background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
     background-color: $color-light-grey;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    @media only screen and (max-width: $bp-large) {
+        background: none;
+        background-color: $color-light-grey;
+
+        & h2 {
+            color: $color-light-black;
+            text-align: center;
+        }
+    } 
 }
 
 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minMax(45rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minMax(40rem, 1fr));
     grid-column-gap: $s-size;
 
     &__right {
@@ -73,21 +91,31 @@
         max-width: 80%;
         margin: 0 auto;
     }
+
+    &__video {
+        width: 90%;
+        height: auto;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(auto-fit, minMax(35rem, 1fr));
+    }
 }
 
 .section-web {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .web {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minMax(45rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minMax(40rem, 1fr));
     grid-column-gap: $s-size;
     height: 100%;
 
     &__title-box {
         border-left: 5px solid $color-medium-pink;
         padding-left: $xl-size;
+        margin-top: $xl-size;
 
         &--right {
             border-left: none;
@@ -104,10 +132,10 @@
 
     &__content-box {
         padding: 0 $xl-size;
+        margin-bottom: $xl-size;
 
         &--right {
             text-align: right;
-
         }
     }
 

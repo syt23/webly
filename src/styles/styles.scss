@@ -4,6 +4,7 @@
 @import './base/button';
 @import './base/card';
 @import './base/gallery';
+@import './base/modal';
 @import './base/mixins';
 @import './base/form';
 @import './base/settings';
@@ -12,5 +13,7 @@
 @import './components/AboutUsPage';
 @import './components/ContactPage';
 @import './components/HomePage';
+@import './components/HamburgerNav';
 @import './components/Nav';
 @import './components/Footer';
+@import './components/ScrollTopButton';

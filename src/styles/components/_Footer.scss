@@ -7,6 +7,14 @@
     &__top {
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+
+            & > *:not(:last-child) {
+                margin-bottom: $m-size;
+            }
+        }
     }
 
     &__bottom {
@@ -53,8 +61,11 @@
     width: 20%;
     list-style: none;
 
-    &__item {
+    @media only screen and (max-width: $bp-medium) {
+        text-align: center;
+    }
 
+    &__item {
         &:not(:last-child) {
             margin-bottom: $m-size;
         }

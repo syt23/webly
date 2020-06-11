@@ -4,6 +4,7 @@
     grid-template-rows: repeat(4, 20vh);
     grid-gap: $s-size;
     padding: $s-size;
+    max-width: 100vw;
 
     &__item {
         &--1 {
@@ -43,6 +44,7 @@
     grid-template-rows: repeat(3, 30vh);
     grid-gap: $s-size;
     padding: $s-size;
+    max-width: 100vw;
 
     &__item {
         &--1 {
@@ -86,6 +88,7 @@
     grid-template-rows: repeat(3, 30vh);
     grid-gap: $s-size;
     padding: $s-size;
+    max-width: 100vw;
 
     &__item {
         &--1 {

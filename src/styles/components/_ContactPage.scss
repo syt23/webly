@@ -1,7 +1,11 @@
 .contact {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(auto-fit, minMax(45rem, 1fr));
     grid-column-gap: $s-size;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: minMax(35rem, 1fr);
+    }
 
     &__left {
         padding: $xl-size;
@@ -11,6 +15,14 @@
         align-items: center;
         text-align: center;
         width: 100%;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: $m-size;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            padding: $s-size;
+        }
     }
 
     &__title {
@@ -34,11 +46,16 @@
         display: flex;
         width: 30%;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 0 auto;
+        }
     }
 
     &__icon-box {
         height: 5rem;
         width: 5rem;
+        display: inline-block;
         
         & svg {
             height: 100%;
@@ -53,7 +70,22 @@
         }
     }
 
+    &__img-box {
+        @media only screen and (max-width: $bp-medium) {
+            height: 25rem;
+
+            & img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+
     &__social {
         display: flex;
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-direction: column;
+        }
     }
 }

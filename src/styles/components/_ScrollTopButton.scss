@@ -1,0 +1,23 @@
+.scroll-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all .2s;
+    margin-right: $s-size;
+    margin-bottom: $s-size;
+    text-align: center;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    & svg {
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+}
