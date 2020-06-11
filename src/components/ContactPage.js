@@ -5,6 +5,7 @@ import axios from 'axios'
 import ResponsiveNav from './ResponsiveNav'
 import Footer from './Footer'
 import contact from '../assets/ContactPage/contact.png'
+import Modal from './Modal'
 
 class ContactPage extends Component {
     state = {
@@ -16,7 +17,8 @@ class ContactPage extends Component {
         numberError: false,
         success: false,
         failure: false,
-        scroll: false
+        scroll: false,
+        showModal: false
     }
 
     componentDidMount() {
@@ -40,29 +42,41 @@ class ContactPage extends Component {
         }
     }
 
-    handleSubmit = (e) => {
+    handleModalClose = () => {
+        this.setState({
+            showModal: false,
+            success: false,
+            failure: false
+        })
+    }
+
+    handleSubmit = async (e) => {
         e.preventDefault();
-        if (!this.state.number.match(/^[0-9]{8,15}$/)) {
-            this.setState({ numberError: true });
+
+        if (this.state.number != '' && !this.state.number.match(/^[0-9]{8,15}$/)) {
+            await this.setState({ numberError: true });
         }
 
         if (!this.state.email.match(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/)) {
-            this.setState({ emailError: true });
+            await this.setState({ emailError: true });
         }
+
         if (this.state.emailError || this.state.numberError) {
+            this.setState({ showModal: true })
             return;
         }
+        console.log(this.state)
 
         axios({
             method: 'post',
-            url: '/mail',
+            url: 'http://localhost:3001/mail',
             timeout: 3000,
             data: {
                 ...this.state
             }
         })
             .then(response => {
-                // console.log("response: " + response)
+                console.dir(response)
                 this.setState({
                     success: true,
                     failure: false,
@@ -70,6 +84,7 @@ class ContactPage extends Component {
                     number: '',
                     email: '',
                     message: '',
+                    showModal: true
                 });
             })
             .catch(error => {
@@ -81,7 +96,8 @@ class ContactPage extends Component {
                     number: '',
                     email: '',
                     message: '',
-                });
+                    showModal: true
+                }, console.log(this.state));
             })
     }
 
@@ -106,20 +122,22 @@ class ContactPage extends Component {
             <div>
                 <ResponsiveNav scroll={this.state.scroll} />
                 {
-                    this.state.error && (
-                        <div className='modal'>
-                            <p>Unknown Error</p>
-                            <p>Please try again later.</p>
-                        </div>
+                    this.state.showModal && (this.state.error || this.state.success) && (
+                        <Modal
+                            title={`${this.state.error ? 'Unknown Error' : ''}${this.state.success ? 'Success!' : ''}`}
+                            content={`${this.state.error ? 'Please try again later.' : ''}${this.state.success ? 'Your message has been sent.' : ''}`}
+                            handleModalClose={this.handleModalClose}
+                        />
                     )
                 }
 
                 {
-                    (this.state.emailError || this.state.numberError) && (
-                        <div className='modal'>
-                            <p>Invalid Field(s): {this.state.emailError ? 'Email' : ''} {this.state.numberError ? 'Number' : ''}</p>
-                            <p>Please enter a valid email and/or phone number.</p>
-                        </div>
+                    this.state.showModal && (this.state.emailError || this.state.numberError) && (
+                        <Modal
+                            title={`Invalid Field(s): ${this.state.emailError ? 'Email' : ''} ${this.state.numberError ? 'Number' : ''}`}
+                            content="Please enter a valid email and/or phone number."
+                            handleModalClose={this.handleModalClose}
+                        />
                     )
                 }
                 <div className="container">
@@ -135,10 +153,10 @@ class ContactPage extends Component {
                             </div>
                             <Fade clear delay={200}>
                                 <form className='form' onSubmit={this.handleSubmit}>
-                                    <input className='form__input' type='text' value={this.state.name} onChange={this.onNameChange} name='name' placeholder='Your name' />
+                                    <input className='form__input' required type='text' value={this.state.name} onChange={this.onNameChange} name='name' placeholder='Your name*' />
                                     <input className='form__input' type='number' value={this.state.number} onChange={this.onNumberChange} name='number' placeholder='Your contact number' />
-                                    <input className='form__input' type='text' value={this.state.email} onChange={this.onEmailChange} name='email' placeholder='Your email' />
-                                    <textarea className='form__input' value={this.state.message} onChange={this.onMessageChange} cols='20' rows='10' placeholder='Your message here' />
+                                    <input className='form__input' required type='text' value={this.state.email} onChange={this.onEmailChange} name='email' placeholder='Your email*' />
+                                    <textarea className='form__input' required value={this.state.message} onChange={this.onMessageChange} cols='20' rows='10' placeholder='Your message here*' />
                                     <input type='submit' className='btn btn-purple align-self' value='SUBMIT' />
                                 </form>
                             </Fade>
