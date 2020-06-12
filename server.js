@@ -2,8 +2,10 @@ const express = require('express')
 const path = require('path')
 const nodemailer = require('nodemailer')
 const bodyParser = require('body-parser')
+const favicon = require('express-favicon')
 const cors = require('cors');
-const creds = require('./backend/config')
+// const creds = require('./backend/config')
+app.use(favicon(__dirname + '/build/favicon.ico'));
 
 const app = express()
 app.use(bodyParser.json())
@@ -16,8 +18,8 @@ const port = process.env.PORT || 3001
 var transport = {
     host: 'smtp.gmail.com',
     auth: {
-        user: creds.USER,
-        pass: creds.PASS
+        user: process.env.USER,
+        pass: process.env.PASS
     }
 }
 var transporter = nodemailer.createTransport(transport)
@@ -31,7 +33,7 @@ app.post('/mail', (req, res) => {
 
     var mail = {
         from: name,
-        to: creds.USER,
+        to: process.env.USER,
         subject: 'New Message from Contact Form',
         text: content
     }
