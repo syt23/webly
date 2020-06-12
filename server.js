@@ -5,9 +5,9 @@ const bodyParser = require('body-parser')
 const favicon = require('express-favicon')
 const cors = require('cors');
 // const creds = require('./backend/config')
-app.use(favicon(__dirname + '/build/favicon.ico'));
 
 const app = express()
+app.use(favicon(__dirname + '/build/favicon.ico'));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
