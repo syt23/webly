@@ -68,7 +68,7 @@ class ContactPage extends Component {
 
         axios({
             method: 'post',
-            url: process.env.BACKEND_URL + '/mail',
+            url: '/mail',
             timeout: 3000,
             data: {
                 ...this.state
