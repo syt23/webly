@@ -173,7 +173,7 @@ class ContactPage extends Component {
                                             <LinkedIn />
                                         </a>
 
-                                        <a className='contact__icon-box' href='https://www.instagram.com' target='_blank' rel='noopener noreferrer'>
+                                        <a className='contact__icon-box' href='https://www.instagram.com/webly_creatives/' target='_blank' rel='noopener noreferrer'>
                                             <Instagram />
                                         </a>
                                     </div>
