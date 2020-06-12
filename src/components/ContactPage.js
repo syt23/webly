@@ -65,7 +65,6 @@ class ContactPage extends Component {
             this.setState({ showModal: true })
             return;
         }
-        console.log(this.state)
 
         axios({
             method: 'post',
@@ -97,7 +96,7 @@ class ContactPage extends Component {
                     email: '',
                     message: '',
                     showModal: true
-                }, console.log(this.state));
+                });
             })
     }
 
