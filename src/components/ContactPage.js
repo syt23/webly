@@ -169,7 +169,7 @@ class ContactPage extends Component {
                                 <p className='paragraph'><b>Do also check out our social media!</b></p>
                                 <Bounce bottom>
                                     <div className='contact__icons'>
-                                        <a className='contact__icon-box' href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer'>
+                                        <a className='contact__icon-box' href='https://www.linkedin.com/company/webly-creatives' target='_blank' rel='noopener noreferrer'>
                                             <LinkedIn />
                                         </a>
 
