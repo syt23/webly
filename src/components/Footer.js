@@ -21,10 +21,10 @@ class Footer extends Component {
                         </Link>
                     </div>
                     <div className='footer__icons'>
-                        <a className='footer__icon-box' href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer'>
+                        <a className='footer__icon-box' href='https://www.linkedin.com/company/webly-creatives' target='_blank' rel='noopener noreferrer'>
                             <LinkedIn />
                         </a>
-                        <a className='footer__icon-box' href='https://www.instagram.com' target='_blank' rel='noopener noreferrer'>
+                        <a className='footer__icon-box' href='https://www.instagram.com/webly_creatives/' target='_blank' rel='noopener noreferrer'>
                             <Instagram />
                         </a>
                     </div>
